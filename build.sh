@@ -1,8 +1,8 @@
-#!/bin/bash
+# /bin/bash
 
 version="v2.2.3"
 
-function pre_check() {
+function#pre_check() {
   info=$(diff -u <(echo -n) <(format))
   if [ -n "$info" ]; then
     echo ">> Make sure you have formatted the codebase before committing."
@@ -44,3 +44,4 @@ elif [ "$1" == "release" ];then
 else
     help
 fi
+ 
